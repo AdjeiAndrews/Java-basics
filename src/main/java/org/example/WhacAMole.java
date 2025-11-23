@@ -11,6 +11,8 @@ public class WhacAMole {
     int boardHeight = 650;
 
     JFrame frame = new JFrame("Mario: Whack A Mole");
+    JLabel textLabel1 = new JLabel();
+    JPanel textPanel1 = new JPanel();
 
     WhacAMole(){
         frame.setVisible(true);
