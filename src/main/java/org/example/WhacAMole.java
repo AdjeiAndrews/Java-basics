@@ -23,13 +23,13 @@ public class WhacAMole {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
 
-        textLabel.setFont(new Font("Arial", Font.PLAIN, 50));
+        textLabel.setFont(new Font("Arial", Font.BOLD, 50));
         textLabel.setHorizontalAlignment(JLabel.CENTER);
         textLabel.setText("Score: 0");
         textLabel.setOpaque(true);
 
-        textPanel.add(textLabel);
         textPanel.setLayout(new BorderLayout());
+        textPanel.add(textLabel);
         frame.add(textPanel, BorderLayout.NORTH);
 
         JPanel boardPanel = new JPanel();
