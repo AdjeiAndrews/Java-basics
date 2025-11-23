@@ -14,13 +14,18 @@ public class WhacAMole {
     JLabel textLabel1 = new JLabel();
     JPanel textPanel1 = new JPanel();
 
-    WhacAMole(){
+    public WhacAMole(){
         frame.setVisible(true);
         frame.setSize(boardWidth, boardHeight);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
+
+        textLabel1.setFont(new Font("Arial", Font.PLAIN, 50));
+        textLabel1.setHorizontalAlignment(JLabel.CENTER);
+        textLabel1.setText("Score: 0");
+        textLabel1.setOpaque(true);
 
     }
 }

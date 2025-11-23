@@ -1,8 +1,8 @@
-import org.example.WhackAMole;
+import org.example.WhacAMole;
 
 public class Main{
     public static void main(String[] args){
-        WhackAMole whacAMole = new WhackAMole();
+        WhacAMole whacAMole = new WhacAMole();
 
 
     }
