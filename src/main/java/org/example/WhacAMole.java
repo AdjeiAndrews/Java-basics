@@ -1,9 +1,8 @@
 package org.example;
-import java.util.Random;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
+import java.util.Random;
 
 public class WhacAMole {
 
@@ -11,8 +10,8 @@ public class WhacAMole {
     int boardHeight = 650;
 
     JFrame frame = new JFrame("Mario: Whack A Mole");
-    JLabel textLabel1 = new JLabel();
-    JPanel textPanel1 = new JPanel();
+    JLabel textLabel = new JLabel();
+    JPanel textPanel = new JPanel();
 
     public WhacAMole(){
         frame.setVisible(true);
@@ -22,10 +21,13 @@ public class WhacAMole {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
 
-        textLabel1.setFont(new Font("Arial", Font.PLAIN, 50));
-        textLabel1.setHorizontalAlignment(JLabel.CENTER);
-        textLabel1.setText("Score: 0");
-        textLabel1.setOpaque(true);
+        textLabel.setFont(new Font("Arial", Font.PLAIN, 50));
+        textLabel.setHorizontalAlignment(JLabel.CENTER);
+        textLabel.setText("Score: 0");
+        textLabel.setOpaque(true);
 
+        textPanel.add(textLabel);
+        textPanel.setLayout(new BorderLayout());
+        frame.add(textPanel, BorderLayout.NORTH);
     }
 }
