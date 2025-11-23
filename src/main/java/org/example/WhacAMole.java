@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
 
+
 public class WhacAMole {
 
     int boardWidth = 600;
@@ -13,7 +14,8 @@ public class WhacAMole {
     JLabel textLabel = new JLabel();
     JPanel textPanel = new JPanel();
 
-    public WhacAMole(){
+    public WhacAMole() {
+
         frame.setVisible(true);
         frame.setSize(boardWidth, boardHeight);
         frame.setResizable(false);
@@ -29,5 +31,10 @@ public class WhacAMole {
         textPanel.add(textLabel);
         textPanel.setLayout(new BorderLayout());
         frame.add(textPanel, BorderLayout.NORTH);
+
+        JPanel boardPanel = new JPanel();
+        boardPanel.setLayout(new GridLayout(3, 3));
+        boardPanel.setBackground(Color.black);
+        frame.add(boardPanel);
     }
 }

@@ -1,9 +1,10 @@
+package org.example;
+
 import org.example.WhacAMole;
 
 public class Main{
     public static void main(String[] args){
         WhacAMole whacAMole = new WhacAMole();
-
 
     }
 }
