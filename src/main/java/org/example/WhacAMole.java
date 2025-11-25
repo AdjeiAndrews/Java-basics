@@ -2,7 +2,7 @@ package org.example;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Random;
+import java.util.*;
 
 
 public class WhacAMole{
@@ -16,6 +16,9 @@ public class WhacAMole{
     JPanel boardPanel = new JPanel();
 
     JButton[] board = new JButton[9];
+    ImageIcon plantIcon;
+    ImageIcon moleIcon;
+
 
     public WhacAMole() {
 
@@ -36,13 +39,17 @@ public class WhacAMole{
         frame.add(textPanel, BorderLayout.NORTH);
 
         boardPanel.setLayout(new GridLayout(3, 3));
-        //boardPanel.setBackground(Color.black);
+        boardPanel.setBackground(Color.black);
         frame.add(boardPanel);
 
+        //plantIcon = new ImageIcon(getClass().getResource("./piranha.png"));
+        Image plantImg  = new ImageIcon(getClass().getResource("./plant.png"));
+        plantIcon = new ImageIcon(plantImg.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH));
         for (int i = 0; i < 9; i++) {
             JButton tile  = new JButton();
             board[i] = tile;
             boardPanel.add(tile);
+            tile.setIcon(plantIcon);
         }
     }
 }
